@@ -66,16 +66,26 @@ a {
     position: relative;
     z-index: 5;
     min-height: 88px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    justify-self: start;
+}
+
+.site-header nav {
+    justify-self: center;
 }
 
 .header-actions {
     display: flex;
     align-items: center;
+    justify-self: end;
     gap: .55rem;
+    flex: 0 0 auto;
 }
 
 .theme-toggle,
@@ -84,6 +94,10 @@ a {
     place-items: center;
     width: 42px;
     height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    flex: 0 0 42px;
+    padding: 0;
     border: 1px solid var(--line);
     border-radius: 3px;
     color: var(--text);
@@ -882,9 +896,7 @@ nav a:hover,
     .site-header {
         z-index: 10;
         min-height: 76px;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-between;
+        grid-template-columns: 1fr auto;
         gap: .75rem;
     }
 
