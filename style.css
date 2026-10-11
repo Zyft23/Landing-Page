@@ -12,6 +12,16 @@
     --line: rgba(255, 255, 255, .09);
     --nav-text: #d6dbd6;
     --card-wash: rgba(255, 255, 255, .035);
+    --accent-glow: rgba(41, 211, 145, .7);
+    --visual-background: linear-gradient(145deg, #1b2721, #151815 65%);
+    --visual-border: rgba(41, 211, 145, .2);
+    --visual-muted: #85918a;
+    --visual-grid: rgba(255, 255, 255, .08);
+    --visual-glow: rgba(41, 211, 145, .14);
+    --visual-shadow: 0 35px 100px rgba(0, 0, 0, .32);
+    --visual-icon-border: rgba(41, 211, 145, .35);
+    --visual-orbit: rgba(41, 211, 145, .08);
+    --contact-border: rgba(41, 211, 145, .24);
     --testimonial-background: linear-gradient(145deg, #1b201c, #161916);
     --contact-background: radial-gradient(ellipse at 100% 0, rgba(41, 211, 145, .14), transparent 43%), #191d19;
     --motion-ease: cubic-bezier(.22, 1, .36, 1);
@@ -24,13 +34,23 @@
     --surface-light: #e8eee8;
     --text: #19251e;
     --muted: #58665e;
-    --accent: #087e56;
-    --accent-soft: rgba(8, 126, 86, .1);
+    --accent: #0b7251;
+    --accent-soft: rgba(11, 114, 81, .1);
     --line: rgba(25, 37, 30, .14);
     --nav-text: #34453b;
     --card-wash: rgba(25, 37, 30, .035);
+    --accent-glow: rgba(11, 114, 81, .25);
+    --visual-background: linear-gradient(145deg, #ffffff, #edf3ee 72%);
+    --visual-border: rgba(11, 114, 81, .22);
+    --visual-muted: #66756c;
+    --visual-grid: rgba(25, 37, 30, .09);
+    --visual-glow: rgba(11, 114, 81, .07);
+    --visual-shadow: 0 25px 70px rgba(25, 37, 30, .09);
+    --visual-icon-border: rgba(11, 114, 81, .3);
+    --visual-orbit: rgba(11, 114, 81, .08);
+    --contact-border: rgba(11, 114, 81, .24);
     --testimonial-background: linear-gradient(145deg, #ffffff, #edf2ed);
-    --contact-background: radial-gradient(ellipse at 100% 0, rgba(8, 126, 86, .1), transparent 43%), #ffffff;
+    --contact-background: radial-gradient(ellipse at 100% 0, rgba(11, 114, 81, .1), transparent 43%), #ffffff;
 }
 
 * {
@@ -227,7 +247,7 @@ nav a:hover,
     height: 7px;
     border-radius: 50%;
     background: var(--accent);
-    box-shadow: 0 0 12px rgba(41, 211, 145, .7);
+    box-shadow: 0 0 12px var(--accent-glow);
 }
 
 .hero-text h1,
@@ -285,10 +305,10 @@ nav a:hover,
     overflow: hidden;
     min-height: 420px;
     padding: 2rem;
-    border: 1px solid rgba(41, 211, 145, .2);
+    border: 1px solid var(--visual-border);
     border-radius: 4px;
-    background: linear-gradient(145deg, #1b2721, #151815 65%);
-    box-shadow: 0 35px 100px rgba(0, 0, 0, .32);
+    background: var(--visual-background);
+    box-shadow: var(--visual-shadow);
 }
 
 .visual-glow {
@@ -299,7 +319,7 @@ nav a:hover,
     width: 280px;
     height: 280px;
     border-radius: 50%;
-    background: rgba(41, 211, 145, .14);
+    background: var(--visual-glow);
     filter: blur(65px);
 }
 
@@ -311,7 +331,7 @@ nav a:hover,
 }
 
 .visual-topline {
-    color: #85918a;
+    color: var(--visual-muted);
     font-size: .67rem;
     letter-spacing: .12em;
 }
@@ -344,7 +364,7 @@ nav a:hover,
 .chart-grid {
     position: absolute;
     inset: 0;
-    background: repeating-linear-gradient(to bottom, transparent 0, transparent 43px, rgba(255, 255, 255, .08) 44px, transparent 45px);
+    background: repeating-linear-gradient(to bottom, transparent 0, transparent 43px, var(--visual-grid) 44px, transparent 45px);
 }
 
 .chart-area svg {
@@ -357,6 +377,10 @@ nav a:hover,
 
 .chart-fill {
     fill: url(#chartFill);
+}
+
+#chartFill stop {
+    stop-color: var(--accent);
 }
 
 .chart-line {
@@ -379,7 +403,7 @@ nav a:hover,
 }
 
 .visual-stats span {
-    color: #89938c;
+    color: var(--visual-muted);
     font-size: .68rem;
 }
 
@@ -394,7 +418,7 @@ nav a:hover,
     width: 32px;
     height: 32px;
     margin-left: auto;
-    border: 1px solid rgba(41, 211, 145, .35);
+    border: 1px solid var(--visual-icon-border);
     border-radius: 50%;
     color: var(--accent);
 }
@@ -402,7 +426,7 @@ nav a:hover,
 .visual-orbit {
     position: absolute;
     z-index: -1;
-    border: 1px solid rgba(41, 211, 145, .08);
+    border: 1px solid var(--visual-orbit);
     border-radius: 50%;
 }
 
@@ -795,7 +819,7 @@ nav a:hover,
     position: relative;
     overflow: hidden;
     padding: clamp(2rem, 6vw, 5rem);
-    border: 1px solid rgba(41, 211, 145, .24);
+    border: 1px solid var(--contact-border);
     background: var(--contact-background);
 }
 
