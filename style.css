@@ -572,6 +572,18 @@ nav a:hover,
     background: radial-gradient(ellipse at 55% 45%, #1d493b, #18221d 58%, #151815);
 }
 
+:root[data-theme='light'] .project-art-one {
+    background: radial-gradient(ellipse at 65% 45%, #edf7f0, #e1f0e6 62%, #d8e9de);
+}
+
+:root[data-theme='light'] .project-art-two {
+    background: radial-gradient(ellipse at 45% 50%, #f1f5e9, #e8efdf 58%, #dfe9d8);
+}
+
+:root[data-theme='light'] .project-art-three {
+    background: radial-gradient(ellipse at 55% 45%, #eaf4f2, #deeeeb 58%, #d5e8e4);
+}
+
 .project-tag {
     position: absolute;
     top: 1.15rem;
@@ -579,6 +591,10 @@ nav a:hover,
     color: rgba(255, 255, 255, .65);
     font-size: .62rem;
     letter-spacing: .14em;
+}
+
+:root[data-theme='light'] .project-tag {
+    color: rgba(25, 37, 30, .68);
 }
 
 .art-dashboard {
@@ -594,10 +610,19 @@ nav a:hover,
     transform: perspective(450px) rotateY(-8deg) rotateX(3deg);
 }
 
+:root[data-theme='light'] .art-dashboard {
+    border-color: rgba(25, 37, 30, .18);
+    background: rgba(255, 255, 255, .72);
+}
+
 .art-bar {
     height: 40%;
     border-radius: 2px 2px 0 0;
     background: linear-gradient(to top, rgba(41, 211, 145, .38), var(--accent));
+}
+
+:root[data-theme='light'] .art-bar {
+    background: linear-gradient(to top, rgba(11, 114, 81, .28), var(--accent));
 }
 
 .art-bar:nth-child(2) {
@@ -636,6 +661,17 @@ nav a:hover,
     box-shadow: 0 0 25px rgba(41, 211, 145, .4);
 }
 
+:root[data-theme='light'] .art-orb {
+    border-color: rgba(11, 114, 81, .55);
+    box-shadow: 0 0 35px rgba(11, 114, 81, .12), inset 0 0 30px rgba(11, 114, 81, .08);
+}
+
+:root[data-theme='light'] .art-orb span {
+    border-color: rgba(11, 114, 81, .65);
+    background: radial-gradient(circle at 35% 35%, rgba(11, 114, 81, .3), rgba(11, 114, 81, .04) 70%);
+    box-shadow: 0 0 25px rgba(11, 114, 81, .2);
+}
+
 .art-nodes {
     position: relative;
     width: 180px;
@@ -658,6 +694,15 @@ nav a:hover,
 .art-nodes span:nth-child(3) { top: 78px; left: 54px; }
 .art-nodes span:nth-child(4) { top: 20px; right: 48px; }
 .art-nodes span:nth-child(5) { top: 62px; right: 0; }
+
+:root[data-theme='light'] .art-nodes {
+    background: linear-gradient(30deg, transparent 49.5%, rgba(11, 114, 81, .4) 50%, transparent 50.5%), linear-gradient(-30deg, transparent 49.5%, rgba(11, 114, 81, .32) 50%, transparent 50.5%);
+}
+
+:root[data-theme='light'] .art-nodes span {
+    background: #f7fbf8;
+    box-shadow: 0 0 12px rgba(11, 114, 81, .2);
+}
 
 .project-copy {
     padding: 1.4rem;
