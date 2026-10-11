@@ -10,6 +10,8 @@
     --accent: #29d391;
     --accent-soft: rgba(41, 211, 145, .12);
     --line: rgba(255, 255, 255, .09);
+    --scroll-track: #121412;
+    --scroll-thumb: #414a43;
     --nav-text: #d6dbd6;
     --card-wash: rgba(255, 255, 255, .035);
     --accent-glow: rgba(41, 211, 145, .7);
@@ -37,6 +39,8 @@
     --accent: #0b7251;
     --accent-soft: rgba(11, 114, 81, .1);
     --line: rgba(25, 37, 30, .14);
+    --scroll-track: #e8eee8;
+    --scroll-thumb: #9eafa3;
     --nav-text: #34453b;
     --card-wash: rgba(25, 37, 30, .035);
     --accent-glow: rgba(11, 114, 81, .25);
@@ -62,6 +66,22 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
+    scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scroll-track);
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid var(--scroll-track);
+    border-radius: 999px;
+    background: var(--scroll-thumb);
 }
 
 body {
@@ -130,6 +150,11 @@ a {
 .menu-toggle:hover {
     border-color: var(--accent);
     color: var(--accent);
+}
+
+:root[data-theme='light'] .theme-toggle {
+    border-color: rgba(25, 37, 30, .2);
+    color: #07583f;
 }
 
 .theme-icon {
@@ -492,6 +517,11 @@ nav a:hover,
     transition: transform .25s ease, border-color .25s ease;
 }
 
+:root[data-theme='light'] .benefit-card {
+    border-color: rgba(25, 37, 30, .2);
+    background: #edf2ed;
+}
+
 .benefit-card:hover {
     transform: translateY(-4px);
     border-color: rgba(41, 211, 145, .35);
@@ -545,6 +575,11 @@ nav a:hover,
     border: 1px solid var(--line);
     background: var(--surface);
     transition: transform .25s ease, border-color .25s ease;
+}
+
+:root[data-theme='light'] .project-card {
+    border-color: rgba(25, 37, 30, .2);
+    background: #edf2ed;
 }
 
 .project-card:hover {
