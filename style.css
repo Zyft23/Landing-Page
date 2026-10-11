@@ -1149,15 +1149,17 @@ nav a:hover,
     }
 
     .site-footer {
-        min-height: 105px;
-        flex-wrap: wrap;
-        gap: .75rem;
+        min-height: 150px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: .8rem;
         padding-block: 1rem;
+        text-align: center;
     }
 
     .site-footer p {
-        order: 1;
-        width: 100%;
+        order: 0;
     }
 }
 
