@@ -311,6 +311,13 @@ nav a:hover,
     box-shadow: var(--visual-shadow);
 }
 
+:root[data-theme='light'] .hero-visual {
+    color: #19251e;
+    border-color: rgba(11, 114, 81, .22);
+    background: linear-gradient(145deg, #ffffff, #edf3ee 72%);
+    box-shadow: 0 25px 70px rgba(25, 37, 30, .09);
+}
+
 .visual-glow {
     position: absolute;
     z-index: -1;
@@ -336,6 +343,11 @@ nav a:hover,
     letter-spacing: .12em;
 }
 
+:root[data-theme='light'] .visual-topline,
+:root[data-theme='light'] .visual-stats span {
+    color: #58665e;
+}
+
 .visual-heading {
     margin-top: 2.2rem;
     font-family: 'Manrope', sans-serif;
@@ -343,6 +355,11 @@ nav a:hover,
     font-weight: 500;
     line-height: 1.3;
     letter-spacing: -.04em;
+}
+
+:root[data-theme='light'] .visual-heading,
+:root[data-theme='light'] .visual-stats strong {
+    color: #19251e;
 }
 
 .visual-heading > span {
@@ -365,6 +382,10 @@ nav a:hover,
     position: absolute;
     inset: 0;
     background: repeating-linear-gradient(to bottom, transparent 0, transparent 43px, var(--visual-grid) 44px, transparent 45px);
+}
+
+:root[data-theme='light'] .chart-grid {
+    background: repeating-linear-gradient(to bottom, transparent 0, transparent 43px, rgba(25, 37, 30, .09) 44px, transparent 45px);
 }
 
 .chart-area svg {
