@@ -51,24 +51,3 @@ document.addEventListener('keydown', (event) => {
 window.matchMedia('(min-width: 641px)').addEventListener('change', (event) => {
     if (event.matches) setMenuOpen(false);
 });
-
-const revealElements = document.querySelectorAll(
-    '.benefit-card, .project-card, .contact-card'
-);
-
-if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.15 });
-
-    revealElements.forEach((element, index) => {
-        element.classList.add('js-reveal');
-        element.style.transitionDelay = `${(index % 3) * 110}ms`;
-        revealObserver.observe(element);
-    });
-}
