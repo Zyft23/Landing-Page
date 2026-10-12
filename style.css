@@ -14,7 +14,6 @@
     --theme-toggle-color: var(--text);
     --contact-border: rgba(127, 169, 141, .24);
     --contact-background: var(--surface);
-    --proof-background: #1c211d;
 }
 
 :root[data-theme='light'] {
@@ -33,7 +32,6 @@
     --theme-toggle-color: #07583f;
     --contact-border: rgba(11, 114, 81, .24);
     --contact-background: var(--surface);
-    --proof-background: #e8eee8;
 }
 
 * {
@@ -476,23 +474,6 @@ a {
 .contact {
     padding-top: 6.5rem;
     padding-bottom: 5rem;
-}
-
-.proof {
-    position: relative;
-    isolation: isolate;
-}
-
-.proof::before {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 100vw;
-    background: var(--proof-background);
-    content: "";
-    transform: translateX(-50%);
 }
 
 .contact-card {
