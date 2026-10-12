@@ -403,6 +403,26 @@ a {
     line-height: 1.75;
 }
 
+.problem-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    list-style: none;
+}
+
+.problem-list li {
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+}
+
+.problem-list h3 {
+    max-width: 24rem;
+    font-size: 1.12rem;
+    font-weight: 500;
+    line-height: 1.55;
+}
+
 .project-list {
     margin-top: 3rem;
 }
@@ -608,8 +628,14 @@ a {
     }
 
     .benefit-list,
-    .project-list {
+    .project-list,
+    .problem-list {
         margin-top: 2rem;
+    }
+
+    .problem-list {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 
     .section-heading-row {
